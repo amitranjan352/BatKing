@@ -1,0 +1,18 @@
+/* PromotionalContent.css */
+.promotional-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content-text {
+    margin-bottom: 20px;
+  }
+  
+  .game-preview {
+    margin-bottom: 20px;
+  }
+  
+  /* Add any additional styling as needed */
+  

@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    font-size: 20px;
+    padding-left : 5px ;
+    font-size : 28px ;
+  }
+  
+  .icons-container {
+    display: flex;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .icon:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+  
