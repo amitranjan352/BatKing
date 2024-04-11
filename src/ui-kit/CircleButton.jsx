@@ -5,8 +5,8 @@ const CircleButton = ({ color, onClick, children }) => {
     const buttonStyle = {
         backgroundColor: color,
         borderRadius: '50%',
-        width: '75px',
-        height: '75px',
+        width: '100px',
+        height: '100px',
         border: 'none',
         cursor: 'pointer',
         display: 'flex',

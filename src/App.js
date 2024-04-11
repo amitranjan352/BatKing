@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import CircleButton from './ui-kit/CircleButton';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import Game from './components/game/Game';
 function App() {
   return (
-    <div>
-      <div className='buttons'>
-        <CircleButton color="red" onClick={() => console.log('Clicked')}>
-          Click
-        </CircleButton>
-        <CircleButton color="blue" onClick={() => console.log('Clicked')}>
-          Click
-        </CircleButton>
-        <CircleButton color="green" onClick={() => console.log('Clicked')}>
-          Click
-        </CircleButton>
+    <>
+      <Header />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/game" element={<Game />} />
 
-      </div>
-    </div>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
