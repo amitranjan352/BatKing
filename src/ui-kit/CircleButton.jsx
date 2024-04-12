@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './CircleButton.css'
 
 const CircleButton = ({ color, onClick, children }) => {
+    const [isSelected, setIsSelected] = useState(false);
     const buttonStyle = {
         backgroundColor: color,
         borderRadius: '50%',
@@ -15,14 +17,25 @@ const CircleButton = ({ color, onClick, children }) => {
         color: '#fff',
         fontSize: '1rem',
         fontWeight: 'bold',
+        opacity: isSelected ? '0.5' : '1', // Reduce opacity if selected
+        pointerEvents: isSelected ? 'none' : 'auto', // Disable pointer events if selected
     };
 
+    const handleSelection = () => {
+        setIsSelected(true);
+        onClick();
+    }
+
+
+
     return (
-        <button style={buttonStyle} onClick={onClick}>
+        <button style={buttonStyle} onClick={handleSelection} disabled={isSelected}>
             {children}
-        </button>
+        </button >
     );
-};
+}
+
+
 
 CircleButton.propTypes = {
     color: PropTypes.string.isRequired,
